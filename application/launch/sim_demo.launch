@@ -1,0 +1,11 @@
+<launch>
+  <!-- This simple launch should be kept to serve as backward compatibility. -->
+  
+  <arg name="fixed_frame" default="/BASE" />
+  <arg name="is_sim" default="true" />
+
+  <include file="$(find teste3)/launch/run.launch">
+    <arg name="fixed_frame" value="$(arg fixed_frame)" />
+    <arg name="is_sim" value="$(arg is_sim)" />
+  </include>
+</launch>
